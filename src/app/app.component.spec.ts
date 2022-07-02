@@ -26,10 +26,21 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('password-generator');
   });
 
-  it('should render title', () => {
+  it('should render top-nav', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('password-generator app is running!');
+    console.log(compiled);
+
+    expect(compiled.querySelector('top-nav')).toBeDefined;
+  });
+
+  it('should render password-generator', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    console.log(compiled);
+
+    expect(compiled.querySelector('password-generator')).toBeDefined;
   });
 });
